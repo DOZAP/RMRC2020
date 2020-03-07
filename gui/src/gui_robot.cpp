@@ -3,7 +3,6 @@
 #include <vector>
 
 vector<double> current_flipper_pos{0, 0, 0, 0};
-
 void dynamixelCallback(const sensor_msgs::JointState &msg) {
   current_flipper_pos[0] = msg.position[3];
   current_flipper_pos[1] = msg.position[2];
