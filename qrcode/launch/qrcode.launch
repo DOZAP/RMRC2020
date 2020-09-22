@@ -1,0 +1,12 @@
+<launch>
+  <node pkg="uvc_camera" name="camera_node" type="uvc_camera_node">
+    <param name="device" type="string" value="/dev/video0"/>
+    <param name="width"  type="int"    value="800"/>
+    <param name="height" type="int"    value="600"/>
+    <param name="pixel_format"         value="mjpg"/>
+  </node>
+
+  <node pkg="qrcode" name="qrcode_node" type="qrcode_recognize.py"/>
+
+  <node pkg="rviz" name="rviz" type="rviz"/>
+</launch>
